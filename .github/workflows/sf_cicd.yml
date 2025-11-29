@@ -38,6 +38,15 @@ jobs:
           SF_DATABASE: "SNOWFLAKE_LEARNING_DB"
           SNOWFLAKE_PASSWORD: "MistyStriver@17"
         run: echo "SF_ACCOUNT is:$SF_ACCOUNT"
+
+      - name: Debug — What files schemachange sees
+        run: |
+          echo "Files inside snowflake:"
+          ls -R $GITHUB_WORKSPACE/snowflake
+
+          echo "Files inside snowflake/changes:"
+          ls -R $GITHUB_WORKSPACE/snowflake/changes || echo "changes folder not found"
+
     
       - name: Run schemachange
         env: # same variables as above
