@@ -20,6 +20,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Upgrade snowflake-connector and schemachange
+        run: |
+          pip install --upgrade schemachange snowflake-connector-python certifi
+
       - name: Upgrade Snowflake Connector
         run: pip install --upgrade snowflake-connector-python
 
