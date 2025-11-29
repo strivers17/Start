@@ -49,7 +49,7 @@ jobs:
       # ---------------------------------------------------------
       - name: Schemachange Full Debug
         env:
-          SF_ACCOUNT: "KVKBROL-AJA98516"
+          SF_ACCOUNT: "QCA99998"
           SF_USERNAME: "STRIVER"
           SF_PASSWORD: "MistyStriver@17"
           SF_ROLE: "ACCOUNTADMIN"
@@ -71,7 +71,7 @@ jobs:
       # ---------------------------------------------------------
       - name: Run schemachange
         env:
-          SF_ACCOUNT: "KVKBROL-AJA98516"
+          SF_ACCOUNT: "QCA99998"
           SF_USERNAME: "STRIVER"
           SF_PASSWORD: "MistyStriver@17"
           SF_ROLE: "ACCOUNTADMIN"
