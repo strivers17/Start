@@ -1,1 +1,1 @@
-create schema striver_stg;
+create schema striver_stage;
