@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: "3.8"
 
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install certifi schemachange snowflake-connector-python
-      #     export SSL_CERT_FILE=$(python -m certifi)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install certifi schemachange snowflake-connector-python
+          export SSL_CERT_FILE=$(python -m certifi)
       - name: Print all environment variables
         env:
             SF_ACCOUNT: "KVKBROL-AJA98516"
