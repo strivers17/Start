@@ -1,4 +1,4 @@
--- changeset STRIVER:create_table_1
+-- changeset STRIVER:create_table_5
 CREATE OR REPLACE TABLE DEMO_STG.EMPLOYEES (
     employee_id   NUMBER NOT NULL,
     first_name    STRING NOT NULL,
@@ -8,3 +8,4 @@ CREATE OR REPLACE TABLE DEMO_STG.EMPLOYEES (
     hire_date     DATE DEFAULT CURRENT_DATE,
     PRIMARY KEY (employee_id)
 );
+
