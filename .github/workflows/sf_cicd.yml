@@ -57,21 +57,6 @@ jobs:
           echo "=== Running Schemachange in DEBUG MODE ==="
           schemachange -f $GITHUB_WORKSPACE/snowflake/changes -v
 
-
-      - name: Debug — What files schemachange sees
-        run: |
-          echo "Files inside snowflake:"
-          ls -R $GITHUB_WORKSPACE/snowflake
-
-          echo "Files inside snowflake/changes:"
-          ls -R $GITHUB_WORKSPACE/snowflake/changes || echo "changes folder not found"
-
-
-          - name: Schemachange Debug
-            run: |
-              echo "=== SCHEMACHANGE DEBUG MODE ==="
-              schemachange -f $GITHUB_WORKSPACE/snowflake/changes -v
-
     
       - name: Run schemachange
         env: # same variables as above
