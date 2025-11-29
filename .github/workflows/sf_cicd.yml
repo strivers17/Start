@@ -28,6 +28,12 @@ jobs:
         with:
           python-version: 3.8.x
 
+      - name: Print SF_ACCOUNT
+        run: echo "SF_ACCOUNT is: $SF_ACCOUNT"
+        env:
+        SF_ACCOUNT: ${{ env.SF_ACCOUNT }}
+
+
       - name: Run schemachange
         env:
           SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
