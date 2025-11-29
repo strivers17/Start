@@ -65,14 +65,8 @@ jobs:
 
           echo "=== RUNNING SCHEMACHANGE DEBUG MODE ==="
           schemachange \
-            -f $GITHUB_WORKSPACE/snowflake/changes \
-            -a $SF_ACCOUNT \
-            -u $SF_USERNAME \
-            -p $SF_PASSWORD \
-            -r $SF_ROLE \
-            -w $SF_WAREHOUSE \
-            -d $SF_DATABASE \
-            -s $SF_SCHEMA \
+           --root-folder $GITHUB_WORKSPACE/snowflake/changes \
+           --connection-name default \
             -v
 
       # ---------------------------------------------------------
