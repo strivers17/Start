@@ -20,6 +20,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Upgrade Snowflake Connector
+        run: pip install --upgrade snowflake-connector-python
+
       - name: Use Python 3.8.x
         uses: actions/setup-python@v2.2.1
         with:
