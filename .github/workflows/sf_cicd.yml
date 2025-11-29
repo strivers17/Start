@@ -50,6 +50,14 @@ jobs:
           echo "=== Running Schemachange in DEBUG MODE ==="
           schemachange -f $GITHUB_WORKSPACE/snowflake/changes -v
 
+          env:
+            SF_ACCOUNT: "KVKBROL-AJA98516"
+            SF_USERNAME: "STRIVER"
+            SF_ROLE: "ACCOUNTADMIN"
+            SF_WAREHOUSE: "COMPUTE_WH"
+            SF_DATABASE: "SNOWFLAKE_LEARNING_DB"
+            SNOWFLAKE_PASSWORD: "MistyStriver@17"
+
       - name: Debug — What files schemachange sees
         run: |
           echo "Files inside snowflake:"
