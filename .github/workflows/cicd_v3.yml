@@ -26,6 +26,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install certifi schemachange snowflake-connector-python
           export SSL_CERT_FILE=$(python -m certifi)
+      - name: Print all environment variables
+        run: |
+          echo "SF_ACCOUNT=[$SF_ACCOUNT]"
+          echo "SF_USERNAME=[$SF_USERNAME]"
+          echo "SF_PASSWORD=[$SF_PASSWORD]"
+          echo "SF_ROLE=[$SF_ROLE]"
+          echo "SF_WAREHOUSE=[$SF_WAREHOUSE]"
+          echo "SF_DATABASE=[$SF_DATABASE]"
+          echo "SF_SCHEMA=[$SF_SCHEMA]"
 
       # ---------------------------------------------------------
       # DEBUG BLOCK — SHOW FILES AND CONTENT (SAFE)
