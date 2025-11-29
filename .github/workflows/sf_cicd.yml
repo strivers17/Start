@@ -39,6 +39,17 @@ jobs:
           SNOWFLAKE_PASSWORD: "MistyStriver@17"
         run: echo "SF_ACCOUNT is:$SF_ACCOUNT"
 
+      - name: Schemachange Full Debug
+        run: |
+          echo "=== FILES FOUND ==="
+          find $GITHUB_WORKSPACE/snowflake -maxdepth 3 -type f -print
+      
+          echo "=== CONTENT OF 001_sql.sql (with hidden characters shown) ==="
+          sed -n '1,20p' $GITHUB_WORKSPACE/snowflake/changes/001_sql.sql | sed -n 'l'
+      
+          echo "=== Running Schemachange in DEBUG MODE ==="
+          schemachange -f $GITHUB_WORKSPACE/snowflake/changes -v
+
       - name: Debug — What files schemachange sees
         run: |
           echo "Files inside snowflake:"
