@@ -31,7 +31,7 @@ jobs:
     
       - name: Print SF_ACCOUNT
         env:
-          SF_ACCOUNT: "AJA98516"
+          SF_ACCOUNT: "KVKBROL-AJA98516"
           SF_USERNAME: "STRIVER"
           SF_ROLE: "ACCOUNTADMIN"
           SF_WAREHOUSE: "COMPUTE_WH"
@@ -41,7 +41,7 @@ jobs:
     
       - name: Run schemachange
         env: # same variables as above
-          SF_ACCOUNT: "AJA98516"
+          SF_ACCOUNT: "KVKBROL-AJA98516"
           SF_USERNAME: "STRIVER"
           SF_ROLE: "ACCOUNTADMIN"
           SF_WAREHOUSE: "COMPUTE_WH"
