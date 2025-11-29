@@ -65,8 +65,9 @@ jobs:
 
           echo "=== RUNNING SCHEMACHANGE DEBUG MODE ==="
           schemachange \
-           --root-folder $GITHUB_WORKSPACE/snowflake/changes \
-           --connection-name default \
+            --root-folder $GITHUB_WORKSPACE/snowflake/changes \
+            --config-folder $GITHUB_WORKSPACE/.schemachange \
+            --connection-name default \
             -v
 
       # ---------------------------------------------------------
