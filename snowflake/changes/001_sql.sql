@@ -1,5 +1,6 @@
 -- changeset STRIVER:create_table_1
-CREATE OR REPLACE TABLE public.employees (
+CREATE SCHEMA DEMO_STG;
+CREATE OR REPLACE TABLE DEMO_STG.EMPLOYEES (
     employee_id   NUMBER NOT NULL,
     first_name    STRING NOT NULL,
     last_name     STRING,
