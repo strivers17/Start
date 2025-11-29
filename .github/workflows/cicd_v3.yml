@@ -27,6 +27,14 @@ jobs:
       #     pip install certifi schemachange snowflake-connector-python
       #     export SSL_CERT_FILE=$(python -m certifi)
       - name: Print all environment variables
+        env:
+            SF_ACCOUNT: "KVKBROL-AJA98516"
+            SF_USERNAME: "STRIVER"
+            SF_PASSWORD: "MistyStriver@17"
+            SF_ROLE: "ACCOUNTADMIN"
+            SF_WAREHOUSE: "COMPUTE_WH"
+            SF_DATABASE: "SNOWFLAKE_LEARNING_DB"
+            SF_SCHEMA: "DEMO_STG"
         run: |
           echo "SF_ACCOUNT=[$SF_ACCOUNT]"
           echo "SF_USERNAME=[$SF_USERNAME]"
