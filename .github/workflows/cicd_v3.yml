@@ -48,6 +48,15 @@ jobs:
       # DEBUG BLOCK — SHOW FILES AND CONTENT (SAFE)
       # ---------------------------------------------------------
 
+      - name: Debug — Check for connections.toml
+        run: |
+          echo "=== SCHEMACHANGE CONFIG FOLDER CHECK ==="
+          echo "Looking inside: $GITHUB_WORKSPACE/.schemachange"
+          ls -la $GITHUB_WORKSPACE/.schemachange || echo "Folder NOT FOUND"
+      
+          echo "=== connections.toml content ==="
+          cat $GITHUB_WORKSPACE/.schemachange/connections.toml || echo "File NOT FOUND"
+
       - name: Fix connections.toml permissions
         run: |
           chmod 600 $GITHUB_WORKSPACE/.schemachange/connections.toml
