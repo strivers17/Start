@@ -1,5 +1,5 @@
 -- changeset STRIVER:create_table_1
-CREATE OR REPLACE TABLE public.employees_git (
+CREATE OR REPLACE TABLE STRIVER_DATABASE_DEV.sales_intxn.employees_git (
     employee_id   NUMBER NOT NULL,
     first_name    STRING NOT NULL,
     last_name     STRING,
