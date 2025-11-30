@@ -47,6 +47,10 @@ jobs:
       # ---------------------------------------------------------
       # DEBUG BLOCK — SHOW FILES AND CONTENT (SAFE)
       # ---------------------------------------------------------
+
+      - name: Fix permissions for connections.toml
+        run: |
+          chmod 600 $GITHUB_WORKSPACE/.schemachange/connections.toml
       - name: Schemachange Full Debug
         env:
           SF_ACCOUNT: "QCA99998"
