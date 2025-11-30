@@ -67,9 +67,8 @@ jobs:
           schemachange \
             --root-folder $GITHUB_WORKSPACE/snowflake/changes \
             --config-folder $GITHUB_WORKSPACE/.schemachange \
-            --connection-name default \
+            --connections-file-path .schemachange/connections.toml \
             -v
-
       # ---------------------------------------------------------
       # MAIN SCHEMACHANGE EXECUTION
       # ---------------------------------------------------------
