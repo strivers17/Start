@@ -47,16 +47,6 @@ jobs:
           SF_WAREHOUSE: "COMPUTE_WH"
           SF_DATABASE: "SNOWFLAKE_LEARNING_DB"
           SNOWFLAKE_PASSWORD: "MistyStriver@17"
-        run: |
-          echo "=== FILES FOUND ==="
-          find $GITHUB_WORKSPACE/snowflake -maxdepth 3 -type f -print
-      
-          echo "=== CONTENT OF 001_sql.sql (with hidden characters shown) ==="
-          sed -n '1,20p' $GITHUB_WORKSPACE/snowflake/changes/001_sql.sql | sed -n 'l'
-      
-          echo "=== Running Schemachange in DEBUG MODE ==="
-          schemachange -f $GITHUB_WORKSPACE/snowflake/changes -v
-
     
       - name: Run schemachange
         env: # same variables as above
