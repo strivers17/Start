@@ -58,6 +58,6 @@ jobs:
           SNOWFLAKE_PASSWORD: "MistyStriver@17"
           SSL_CERT_FILE: ${{ env.SSL_CERT_FILE }}
         run: |
-          schemachange -f $GITHUB_WORKSPACE/snowflake -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -v
+          schemachange -f $GITHUB_WORKSPACE/snowflake -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table -v
           
           # -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
