@@ -1,6 +1,6 @@
 -- changeset STRIVER:create_table_1
 use database SNOWFLAKE_LEARNING_DB;
-create schema sales_intxn;
+create or replace schema sales_intxn;
 CREATE OR REPLACE TABLE sales_intxn.employees_git_2 (
     employee_id   NUMBER NOT NULL,
     first_name    STRING NOT NULL,
