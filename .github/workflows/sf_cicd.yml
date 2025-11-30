@@ -54,7 +54,7 @@ jobs:
           SF_USERNAME: "STRIVER"
           SF_ROLE: "ACCOUNTADMIN"
           SF_WAREHOUSE: "COMPUTE_WH"
-          SF_DATABASE: "SNOWFLAKE_LEARNING_DB"
+          SF_DATABASE: "STRIVER_DATABASE_DEV"
           SNOWFLAKE_PASSWORD: "MistyStriver@17"
           SSL_CERT_FILE: ${{ env.SSL_CERT_FILE }}
         run: |
